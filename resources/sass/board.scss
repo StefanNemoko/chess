@@ -1,0 +1,38 @@
+
+.card{
+    .bg-khaki{
+        background-color: #c6ac8f;
+
+        .bg-beige{
+            background-color:  #fff8e7;
+        }
+
+        .bg-brown{
+            background-color: #663300;
+        }
+
+        .bg-beige, .bg-brown{
+            .Piece{
+                position: relative;
+                z-index: 20;
+            }
+        }
+
+
+        .header-row div, .black-row div, .white-row div{
+            max-height: 75px;
+            min-height: 75px;
+            min-width: 75px;
+        }
+        .header-row div{
+            max-width: 101px;
+            min-height: 20px;
+            min-width: 75px;
+            padding: 0;
+        }
+    }
+}
+
+
+
+

@@ -1,0 +1,106 @@
+<template>
+    <div class="row">
+        <div class="row black-row" v-if="startrow">
+            <div class="col my-auto">
+                <h3 class="text-center">{{row}}</h3>
+            </div>
+            <div class="col bg-brown text-white Droppable">
+                <Rook class="Rook Piece" color="black"/>
+            </div>
+            <div class="col bg-beige Droppable">
+                <Bishop class="Bishop Piece" color="black"/>
+            </div>
+            <div class="col bg-brown text-white Droppable">
+                <Knight class="Knight Piece" color="black"/>
+            </div>
+            <div class="col bg-beige Droppable">
+                <King class="King Piece" color="black"/>
+            </div>
+            <div class="col bg-brown text-white Droppable">
+                <Queen class="Queen Piece" color="black"/>
+            </div>
+            <div class="col bg-beige Droppable">
+                <Knight class="Knight Piece" color="black"/>
+            </div>
+            <div class="col bg-brown text-white Droppable">
+                <Bishop class="Bishop Piece" color="black"/>
+            </div>
+            <div class="col bg-beige Droppable">
+                <Rook class="Rook Piece" color="black"/>
+            </div>
+            <div class="col my-auto">
+                <h3 class="text-center">{{row}}</h3>
+            </div>
+        </div>
+        <div class="row black-row" v-else-if="pawnrow">
+            <div class="col my-auto">
+                <h3 class="text-center">{{row}}</h3>
+            </div>
+            <div class="col bg-brown text-white Droppable">
+                <Pawn class="Pawn white Piece" color="white"/>
+            </div>
+            <div class="col bg-beige Droppable">
+                <Pawn class="Pawn white Piece" color="white"/>
+            </div>
+            <div class="col bg-brown text-white Droppable">
+                <Pawn class="Pawn white Piece" color="white"/>
+            </div>
+            <div class="col bg-beige Droppable">
+                <Pawn class="Pawn white Piece" color="white"/>
+            </div>
+            <div class="col bg-brown text-white Droppable">
+                <Pawn class="Pawn white Piece" color="white"/>
+            </div>
+            <div class="col bg-beige Droppable">
+                <Pawn class="Pawn white Piece" color="white"/>
+            </div>
+            <div class="col bg-brown text-white Droppable">
+                <Pawn class="Pawn white Piece" color="white"/>
+            </div>
+            <div class="col bg-beige Droppable">
+                <Pawn class="Pawn white Piece" color="white"/>
+            </div>
+            <div class="col my-auto">
+                <h3 class="text-center">{{row}}</h3>
+            </div>
+        </div>
+        <div class="row black-row" v-else>
+            <div class="col my-auto">
+                <h3 class="text-center">{{row}}</h3>
+            </div>
+            <div class="col bg-brown text-white column Droppable"></div>
+            <div class="col bg-beige column Droppable"></div>
+            <div class="col bg-brown text-white column Droppable"></div>
+            <div class="col bg-beige column Droppable"></div>
+            <div class="col bg-brown text-white column Droppable"></div>
+            <div class="col bg-beige column Droppable"></div>
+            <div class="col bg-brown text-white column Droppable"></div>
+            <div class="col bg-beige column Droppable"></div>
+            <div class="col my-auto">
+                <h3 class="text-center">{{row}}</h3>
+            </div>
+        </div>
+    </div>
+</template>
+
+<script>
+import Queen from '../Pieces/Queen'
+import King from '../Pieces/King'
+import Rook from '../Pieces/Rook'
+import Knight from '../Pieces/Knight'
+import Bishop from '../Pieces/Bishop'
+import Pawn from '../Pieces/Pawn'
+
+export default ({
+    props: ['row', 'startrow', 'pawnrow'],
+        components:{
+        Queen,
+        King,
+        Rook,
+        Knight,
+        Bishop,
+        Pawn,
+    }
+})
+</script>
+
